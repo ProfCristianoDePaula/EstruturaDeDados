@@ -2,9 +2,61 @@
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Minha primeira branch!");
-        Console.WriteLine("Trabalhando com Git/Github");
-        Console.WriteLine("Mais uma Tentativa de trabalhar com Git");
+        // TRABALHANDO COM LISTA ( LIST )
+
+        /* Criando uma lista */
+        List<string> frutas = new List<string>();
+
+        /* Adicionar itens na Lista*/
+        frutas.Add("Morango");
+        frutas.Add("Manga");
+        frutas.Add("Goiaba");
+        frutas.Add("Uva");
+
+        /* Imprimir os Itens da Lista
+        /* Impressao da Lista em um única linha */
+        frutas.ForEach(Console.WriteLine);
+
+        Console.WriteLine(); // Pula linha em Branco
+
+        /* Imprimir elemento no indice específico */
+        Console.WriteLine("Fruta na indice 2: " + frutas[2]);
+
+        /* Inserir um elemento no indice específico */
+        frutas.Insert(1, "Maracuja");
+
+        /* Imprimindo a Lista novamente */
+        Console.WriteLine(); // Pula linha em Branco
+
+        Console.WriteLine("Minha Lista de Frutas:");
+        foreach (string fruta in frutas)
+        {
+            Console.WriteLine(fruta);
+        }
+
+        /* Alterar um elemento no índice específico */
+        frutas[4] = "Pêra";
+        /* Imprimindo a Lista novamente */
+        Console.WriteLine(); // Pula linha em Branco
+        Console.WriteLine("Minha Lista de Frutas:");
+        foreach (string fruta in frutas)
+        {
+            Console.WriteLine(fruta);
+        }
+
+        /* Remover elementos da lista no indice específico */
+        frutas.RemoveAt(3);
+
+        /* Remover elementos pelo valor do conteúdo */
+        frutas.Remove("Morango");
+
+        /* Imprimindo a Lista novamente */
+        Console.WriteLine(); // Pula linha em Branco
+        Console.WriteLine("Minha Lista de Frutas:");
+        frutas.ForEach(Console.WriteLine);
+
+        /* Apagar todos os elementos da lista */
+        frutas.Clear();
 
     }
 }
