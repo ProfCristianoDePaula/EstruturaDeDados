@@ -67,7 +67,7 @@
         carros.Add(2, "Ford Ka");
 
         Console.WriteLine(); // Pula linha em Branco
-        Console.WriteLine("============================");
+        Console.WriteLine("===========================");
         Console.WriteLine(); // Pula linha em Branco
 
         Console.WriteLine("Meu Dicionario de Carros:");
@@ -76,5 +76,80 @@
         {
             Console.WriteLine($"{carro.Key} - {carro.Value}");
         }
+
+        Console.WriteLine(); // Pula linha em Branco
+        Console.WriteLine("===========================");
+        Console.WriteLine(); // Pula linha em Branco
+
+        // TRABALHANDO COM FILA //
+        /* Criar uma Fila (Queue) */
+        Queue<string> filaBanco = new Queue<string>();
+
+        /* Adicionar Elementos em uma FILA */
+        filaBanco.Enqueue("André");
+        filaBanco.Enqueue("João");
+        filaBanco.Enqueue("Maria");
+        filaBanco.Enqueue("Bia");
+
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+        }
+
+        /* retirar o primeiro elemento de uma fila */
+        filaBanco.Dequeue();
+
+        Console.WriteLine(); // Pula linha em Branco
+        Console.WriteLine("===========================");
+        Console.WriteLine(); // Pula linha em Branco
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+        }
+
+        /* Verificar se existe um elemento na fila */
+
+        bool achou = filaBanco.Contains("Manoel");
+
+        if (achou)
+        {
+            Console.WriteLine("A Pessoa está na Fila");
+        }
+        else
+        {
+            Console.WriteLine("A Pessoa NÃO está na Fila");
+        }
+
+        Console.WriteLine(); // Pula linha em branco
+        Console.WriteLine("=============================================");
+        Console.WriteLine(); // Pula linha em branco
+
+        // TRABALHANDO COM PILHA (STACK)
+        /* Criando uma Pilha */
+        Stack<string> livros = new Stack<string>();
+
+        /* Adicionar elementos em uma pilha */
+        livros.Push("Chapeuzinho Vermelho");
+        livros.Push("Branca de Neve e os Sete Anões");
+        livros.Push("Princesa e o Sapo");
+
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+        Console.WriteLine(); //pula linha em branco
+        Console.WriteLine("=========================");
+        Console.WriteLine(); //pula linha em branco
+
+        /* Remove o primeiro elemento da Pilha */
+        livros.Pop();
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+        Console.WriteLine(); //pula linha em branco
+        Console.WriteLine("=========================");
+        Console.WriteLine(); //pula linha em branco
     }
+
 }
